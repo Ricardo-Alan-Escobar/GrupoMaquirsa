@@ -1,0 +1,91 @@
+---
+
+import { Image } from 'astro:assets';
+
+// In a real Astro project, you'd import these images from your assets
+const constructionImage = '/placeholder.svg?height=200&width=300';
+const structuresImage = '/placeholder.svg?height=200&width=300';
+const installationsImage = '/placeholder.svg?height=200&width=300';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import drj1 from "../components/Img/drenaje-2.jpg"
+import drj2 from "../components/Img/DRENAJE1.jpg"
+---
+
+<Layout></Layout>
+
+<main>
+<div class="w-full h-20 bg-sky-900"><p>d</p>.</div>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold text-center mb-4">DRENAJES</h1>
+  <p class="text-center mb-8">
+    En Maquirsa del centro, entendemos la importancia de un sistema de drenaje eficaz
+para la protección de tus propiedades y la preservación del entorno. Ofrecemos soluciones
+integrales de drenaje diseñadas para controlar y gestionar las aguas pluviales y residuales,
+asegurando la estabilidad y funcionalidad de tus infraestructuras
+  </p>
+
+  <h2 class="text-2xl font-semibold mb-4">A continuación, se detalla la gama de servicios ofrecidos por la empresa.</h2>
+
+  <div class="space-y-8">
+    <div class="flex flex-col md:flex-row gap-4">
+      <div class="flex items-center justify-center">
+        <h3 class="text-xl font-semibold flex items-center gap-2 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          Drenaje de Agua Pluvial
+        </h3>
+      </div>
+      <img src={drj1.src} alt="Construction site"  width={300} height={200} class="rounded-lg ml-80" />
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-4">
+      <div class="flex-1">
+        <h3 class="text-xl font-semibold flex items-center gap-2 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+          Servicios de Drenaje:
+        </h3>
+        <ul class="list-disc list-inside">
+          <li>Drenaje Longitudinal</li>
+          <li>Drenaje Transversal</li>
+          <li>Drenaje Subterráneo</li>
+          <li>Drenaje de Plataforma</li>
+        </ul>
+      </div>
+      <p class="rounded-lg font-bold text-2xl flex items-center"> Algunos de nuestros proyectos realizados: </p>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-4">
+      <div class="flex-1">
+        <h3 class="text-xl font-semibold flex items-center gap-2 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+          </svg>
+          Construccion de tuberías:
+        </h3>
+        <ul class="list-disc list-inside">
+          <li>Tubería Maestra de Agua</li>
+          <li>Líneas de Alcantarillado</li>
+          <li>Ventanas</li>
+          <li>Puertas</li>
+          <li>Iluminación</li>
+          <li>Tuberías de agua</li>
+        </ul>
+      </div>
+      <img src={drj2.src} alt="Installation work" width={300} height={200} class="rounded-lg" />
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<Footer></Footer>
+</main>
+    
+</main>
+
+<Footer></Footer>

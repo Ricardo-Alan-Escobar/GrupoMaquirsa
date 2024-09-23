@@ -1,0 +1,130 @@
+---
+import BtnDesplazamiento from "../components/btn-desplazamiento.astro"
+import Layout from "../layouts/Layout.astro"
+import Footer from "../components/Footer.astro"
+import m1 from "../components/Img/m1.png"
+import m2 from "../components/Img/m2.png"
+import m3 from "../components/Img/m3.1.png"
+import m4 from "../components/Img/M4.png"
+import m5 from "../components/Img/m5.png"
+import m6 from "../components/Img/m6.png"
+import m7 from "../components/Img/m7.png"
+import m8 from "../components/Img/m8.png"
+import m9 from "../components/Img/m9.png"
+---
+
+<Layout></Layout>
+
+<section class="text-gray-600 body-font">
+  <section class="relative h-[50vh] min-h-[400px] w-full bg-cover bg-center">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/20 brightness-50"
+      style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');"
+    >
+    </div>
+    <div class="absolute inset-0 flex flex-col justify-center px-4 sm:px-6 lg:px-8 ml-10">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl animate-fade-in">
+        VENTA Y RENTA DE MAQUINARIA
+      </h1>
+      <p class="mt-4 max-w-3xl text-xl text-gray-300 animate-fade-in animate-delay-200">
+        Contamos con amplia variedad de equipos para todo tipo de construcción.
+      </p>
+    </div>
+  </section>
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap">
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative w-full h-96">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m1.src}>
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-10">RETROEXCAVADORAS</h1>
+              <p class="mb-10">Nuestras retroexcavadoras mejoran la productividad, ya sea en las aplicaciones de construcción o agricultura, y reducen los costos de operación de la máquina.</p>
+               <div class="w-full flex justify-center h-auto"><a href="./retroexcavadoras.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative w-full h-96">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m2.src}>
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-10">CARGADORES</h1>
+              <p class="mb-10">Este tipo de maquinaria es esencial en numerosas actividades debido a su versatilidad y capacidad de carga.</p>
+               <div class="w-full flex justify-center h-auto"><a href="/cargadores.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative w-full h-96">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m3.src}>
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-10">MOTOCONFORMADORAS</h1>
+              <p class="mb-10">Desde su diseño y características hasta su funcionamiento y aplicaciones, descubrirás cómo este  vehículo especializado se utiliza para dar forma y nivelar superficies de manera eficiente y precisa.</p>
+               <div class="w-full flex justify-center h-auto"><a href="/motoconformadoras.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative w-full h-96">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m4.src}>
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-10">TRAILERS</h1>
+              <p class="mb-10">Los tráilers son una herramienta fundamental para mover grandes cantidades de productos de un lugar a otro.</p>
+               <div class="w-full flex justify-center h-auto"><a href="./trailers.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative w-full h-96">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m5.src}>
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-10">LOWBOYS</h1>
+              <p class="mb-10">Se refiere a un tipo de remolque de plataforma baja que son remolcados por un tractocamión y son las más adecuadas para todo tipo de cargas pesadas y materiales de grandes dimensiones.</p>
+               <div class="w-full flex justify-center h-auto"><a href="./lowboy.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative w-full h-96">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m6.src}>
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-10">COMPACTADORES</h1>
+              <p class="mb-10">Compactar de acuerdo con las especificaciones es muy importante para aplicaciones de suelos y pavimentación.</p>
+               <div class="w-full flex justify-center h-auto"><a href="./compactadores.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+          </div>
+        </div>
+      </div> 
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative w-full h-96">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m7.src}>
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-10">EXCAVADORAS</h1>
+                <p class="mb-10">El funcionamiento simple, la sorprendente durabilidad y las más recientes características de seguridad y tecnología lo ayudarán a llevar a su proyecto al siguiente nivel.</p>
+               <div class="w-full flex justify-center h-auto"><a href="./excavadoras.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative w-full h-96">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m8.src}>
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-10">PETROLIZADORAS</h1>
+                <p class="mb-10">Son utilizadas en construcciones dedicadas a terracerías y pavimentos y en la construcción de carreteras.</p>
+               <div class="w-full flex justify-center h-auto"><a href="./petrolizadoras.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative w-full h-96">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src={m9.src}>
+              <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-10">EQUIPO LIGERO</h1>
+                <p class="mb-10">Esta es muy útil no solo para las empresas constructoras sino que también para los particulares ya que facilita mucho el trabajo de construcción.</p>
+               <div class="w-full flex justify-center h-auto"><a href="./equipo_ligero.html" class="px-32 py-5 rounded-md text-2xl bg-green-400 hover:bg-green-800 hover:text-white">Conocer</a></div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </section>
+<BtnDesplazamiento></BtnDesplazamiento>
+<Footer></Footer>

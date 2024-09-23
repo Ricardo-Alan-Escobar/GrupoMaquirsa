@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Footer from "../components/Footer.astro"
+const services = [
+  { name: "Construcción de caminos", icon: "fa-road" },
+  { name: "Obras de terracería", icon: "fa-hammer" },
+  { name: "Urbanización", icon: "fa-city" },
+  { name: "Pavimentación", icon: "fa-road" },
+  { name: "Sistemas de drenaje", icon: "fa-water" },
+]
+
+const additionalServices = [
+  {
+    title: "Venta y alquiler de maquinaria pesada",
+    description: "Ofrecemos una amplia gama de maquinaria pesada para venta y alquiler, incluyendo excavadoras, bulldozers, grúas y más. Nuestro equipo de expertos puede ayudarte a seleccionar la maquinaria adecuada para tu proyecto."
+  },
+  {
+    title: "Transporte de maquinaria y equipo",
+    description: "Proporcionamos servicios de transporte seguro y eficiente para maquinaria y equipo de construcción. Nuestro equipo especializado garantiza que tu maquinaria llegue a su destino en perfectas condiciones y a tiempo."
+  }
+]
+import mapa1 from "../components/Img/MAPA4.jpg"
+---
+<Layout></Layout>
+<div class="w-full">
+  <section class="relative h-[50vh] min-h-[400px] w-full bg-cover bg-center">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/20 brightness-50"
+      style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');"
+    >
+    </div>
+    <div class="absolute inset-0 flex flex-col justify-center px-4 sm:px-6 lg:px-8 ml-10">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl animate-fade-in">
+        Acerca de nosotros
+      </h1>
+      <p class="mt-4 max-w-3xl text-xl text-gray-300 animate-fade-in animate-delay-200">
+        Mas de 40 Años de experiencia nos respaldan
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto ">
+      <p class="mt-4 text-lg text-gray-700 animate-fade-in">
+        Somos una empresa destacada en el sector de la construcción, comprometida con la excelencia en cada
+        proyecto. Ofrecemos soluciones integrales en ingeniería civil, realizando proyectos de:
+      </p>
+
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((service, index) => (
+          <div class={`bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in animate-delay-${index * 100}`}>
+            <i class={`fas ${service.icon} text-3xl text-blue-600 mb-4`}></i>
+            <h3 class="text-lg font-semibold text-gray-900">{service.name}</h3>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 animate-fade-in animate-delay-500">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Además:</h2>
+        <div class="space-y-4">
+          {additionalServices.map((service, index) => (
+            <div class="border-b border-gray-200 pb-4">
+              <button
+                class="w-full text-left flex items-center justify-between text-gray-700 focus:outline-none"
+                id={`toggle-${index}`}
+                aria-expanded="false"
+                aria-controls={`content-${index}`}
+              >
+                <span class="flex items-center">
+                  <i class="fas fa-chevron-right text-blue-600 mr-2 transition-transform duration-300"></i>
+                  {service.title}
+                </span>
+                <i class="fas fa-plus text-blue-600 transition-transform duration-300"></i>
+              </button>
+              <div id={`content-${index}`} class="mt-2 text-gray-600 hidden">
+                <p>{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="w-full h-full flex items-center justify-center flex-col">
+  <h1 class="text-4xl  mb-8"><b>Cobertura del mercado multiregional en los siguientes estados.</b></h1>
+  <img src={mapa1.src} alt="none" class="bg-transparent"></div>
+<Footer></Footer>
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[id^="toggle-"]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const content = document.getElementById(`content-${button.id.split('-')[1]}`);
+      const icon = button.querySelector('.fa-chevron-right');
+      const plusIcon = button.querySelector('.fa-plus');
+      
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-90');
+      plusIcon.classList.toggle('rotate-45');
+      
+      button.setAttribute('aria-expanded', content.classList.contains('hidden') ? 'false' : 'true');
+    });
+  });
+</script>

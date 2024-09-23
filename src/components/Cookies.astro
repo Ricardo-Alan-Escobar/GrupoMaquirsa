@@ -1,0 +1,113 @@
+---
+---
+
+<div id="cookie-consent" class="cookie-consent">
+    <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestro uso de cookies.</p>
+    <div class="button-group">
+      <button id="accept-cookies" class="button primary">Aceptar cookies</button>
+      <button id="decline-cookies" class="button secondary">Rechazar</button>
+    </div>
+  </div>
+  
+  <script>
+    const cookieConsent = document.getElementById('cookie-consent');
+    const acceptButton = document.getElementById('accept-cookies');
+    const declineButton = document.getElementById('decline-cookies');
+  
+    function hideCookieConsent() {
+      cookieConsent.style.display = 'none';
+    }
+  
+    function showCookieConsent() {
+      cookieConsent.style.display = 'block';
+    }
+  
+    function setCookieConsent(accepted: boolean) {
+      localStorage.setItem('cookieConsent', accepted.toString());
+      hideCookieConsent();
+    }
+  
+    function checkCookieConsent() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent === null) {
+        showCookieConsent();
+      } else {
+        hideCookieConsent();
+      }
+    }
+  
+    acceptButton.addEventListener('click', () => setCookieConsent(true));
+    declineButton.addEventListener('click', () => setCookieConsent(false));
+  
+    document.addEventListener('DOMContentLoaded', checkCookieConsent);
+  </script>
+  
+  <style>
+    .cookie-consent {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      z-index: 50;
+      display: none;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+      color: #4a5568;
+    }
+  
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .button {
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+  
+    .primary {
+      background-color: #4299e1;
+      color: #ffffff;
+      border: none;
+    }
+  
+    .primary:hover {
+      background-color: #3182ce;
+    }
+  
+    .secondary {
+      background-color: #ffffff;
+      color: #4a5568;
+      border: 1px solid #e2e8f0;
+    }
+  
+    .secondary:hover {
+      background-color: #f7fafc;
+    }
+  
+    @media (min-width: 640px) {
+      .cookie-consent {
+        max-width: 28rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+      .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+  </style>

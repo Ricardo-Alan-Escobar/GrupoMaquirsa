@@ -1,0 +1,107 @@
+---
+//Importar la imagen
+import Logo from "../components/Img/logop.png";
+---
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>Maquirsa del Centro</title>
+	<!--FONT AWESOME-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<!--Fuentes-->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+</head>
+
+
+  
+<nav class="bg-sky-900 w-full m-0 fixed h-20 text-white flex items-center justify-between z-50 px-4">
+	<!-- Logo -->
+	<div class="flex items-center">
+	  <a class="navbar-brand" href="./index.html">
+		<img class="h-14" src={Logo.src} alt="Logo">
+	  </a>
+	</div>
+  
+	<!-- Menu - Hidden by default on smaller screens -->
+	<div class="hidden md:flex md:space-x-8 mr-10">
+	  <ul class="flex space-x-8">
+		<li>
+			<a href="/index.html" class="s px-2 py-4 hover:bg-sky-950 rounded">Inicio</a>
+		  </li>
+		<li>
+		  <a href="/index.html#conocenos" class=" px-1 py-4 hover:bg-sky-950 rounded hover:text-white">Quienes somos</a>
+		</li>
+		<li>
+		  <a href="/index.html#servicios" class="hover:white px-1 py-4 hover:bg-sky-950 rounded">Servicios</a>
+		</li>
+		<li>
+		  <a href="maquinaria.html" class=" px-1 py-4 hover:bg-sky-950 rounded">Maquinaria</a>
+		</li>
+		<li>
+		  <a href="wa.link/bs1xt5" class="hover:text-green-400 p-2"><i class="fa-brands fa-whatsapp"></i></a>
+		</li>
+		<li>
+		  <a href="https://www.facebook.com/p/Grupo-Maquirsa-100063649539774/?locale=es_LA" class="hover:text-blue-600"><i class="fa-brands fa-facebook-f"></i></a>
+		</li>
+	  </ul>
+	</div>
+  
+	<!-- Hamburger Menu - Visible on smaller screens -->
+	<div class="md:hidden">
+	  <button
+		class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75"
+		id="menu-toggle"
+	  >
+		<span class="sr-only">Toggle menu</span>
+		<svg
+		  xmlns="http://www.w3.org/2000/svg"
+		  class="h-6 w-6"
+		  fill="none"
+		  viewBox="0 0 24 24"
+		  stroke="currentColor"
+		  stroke-width="2"
+		>
+		  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+		</svg>
+	  </button>
+	</div>
+  
+	<!-- Mobile Menu -->
+	<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-sky-900 text-white">
+	  <ul class="flex flex-col items-center space-y-4 py-4">
+		<li>
+			<a href="./index.html" class="hover:text-slate-300">Inicio</a>
+		  </li>
+		<li>
+		  <a href="#conocenos" class="hover:text-slate-300">Quienes somos</a>
+		</li>
+		<li>
+		  <a href="#servicios" class="hover:text-slate-300">Servicios</a>
+		</li>
+		<li>
+		  <a href="./maquinaria.html" class="hover:text-slate-300">Maquinaria</a>
+		</li>
+		<li>
+		  <a href="https://wa.link/9nmr67" class="hover:text-green-400 p-2"><i class="fa-brands fa-whatsapp"></i></a>
+		</li>
+		
+		<li>
+		  <a href="www.facebook.com/p/Grupo-Maquirsa-100063649539774/?locale=es_LA" class="hover:text-blue-600"><i class="fa-brands fa-facebook-f"></i></a>
+		</li>
+	  </ul>
+	</div>
+  </nav>
+  
+		<script>
+        
+const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+		</script>

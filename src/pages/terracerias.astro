@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+// Importar imágenes
+import trr1 from "../components/Img/t2.jpg"
+import trr2 from "../components/Img/t1.jpg"
+import trr3 from "../components/Img/pav2.jpg"
+import trr4 from "../components/Img/c5.jpg"
+import trr5 from "../components/Img/c3.jpg"
+---
+
+<Layout></Layout>
+<main>
+<div class="w-full h-20 bg-sky-900"><p>d</p>.</div>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold text-center mb-4">Terraceria</h1>
+  
+  <p class="text-center mb-8">
+    En cualquier proyecto, el punto de partida suele ser la terracería. Por eso, en Maquirsa del
+Centro proporcionamos una amplia gama de maquinaria especializada para cada etapa del
+proIceso. Desde la preparación inicial hasta la finalización del proyecto, nos aseguramos de
+ofrecerte el equipo adecuado para lograr resultados excepcionales y con los mejores materiales
+disponibles.
+  </p>
+
+  <h2 class="text-2xl font-semibold mb-4 text-center">Aquí se detallan los servicios disponibles de la empresa.</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div>
+      <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
+        
+        Construcción y Pavimentación:
+      </h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Pavimentación de calles</li>
+        <li>Trabajo de repavimentación de calles y carreteras </li>
+        <li>Gestión de pavimentación y superficies de edificios </li>
+        
+      </ul>
+      <div class="grid grid-cols-2 gap-4 mt-10">
+        <img src={trr2.src} alt="Construction site 2" width={300} height={200} class="rounded-lg" />
+      </div>
+    </div>
+    
+    <div>
+      <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
+        
+        Mantenimiento de Infraestructura:
+      </h3>
+      <ul class="list-disc list-inside mb-4">
+        <li> Pavimentos de superficie</li>
+        <li> Asistencia en pavimentación de calles y carreteras</li>
+        
+      </ul>
+      <div class="grid grid-cols-2 gap-4 mt-12">
+        <img src={trr1.src} alt="Maintenance work 1" width={300} height={200} class="rounded-lg" />
+    </div>
+  </div>
+</div>
+</main>
+
+<Footer></Footer>

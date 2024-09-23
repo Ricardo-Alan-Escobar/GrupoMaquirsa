@@ -1,0 +1,114 @@
+---
+---
+
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-10 border-2 mb-20">
+  <div class="w-full flex justify-center mb-8">
+      <h2 class="text-3xl font-extrabold text-amber-400">Cotiza con nosotros</h2>
+  </div>
+  <form id="cotizaForm" class="space-y-6">
+      <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
+          <div>
+              <label for="nombre" class="block text-sm font-semibold text-gray-700">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+          </div>
+          <div>
+              <label for="telefono" class="block text-sm font-semibold text-gray-700">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" required class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+          </div>
+      </div>
+      <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
+          <div>
+              <label for="correo" class="block text-sm font-semibold text-gray-700">Correo electrónico:</label>
+              <input type="email" id="correo" name="correo" required class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+          </div>
+          <div>
+              <label for="estado" class="block text-sm font-semibold text-gray-700">Estado:</label>
+              <input type="text" id="estado" name="estado" required class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+          </div>
+      </div>
+      <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
+          <div>
+              <label for="ciudad" class="block text-sm font-semibold text-gray-700">Ciudad:</label>
+              <input type="text" id="ciudad" name="ciudad" required class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+          </div>
+          <div>
+              <label for="servicio" class="block text-sm font-semibold text-gray-700">Selecciona el servicio de tu interés*:</label>
+              <select id="servicio" name="servicio" required class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                  <option value="">Selecciona un servicio</option>
+                  <option value="obra civil">Obra civil</option>
+                  <option value="urbanizacion">Urbanización</option>
+                  <option value="drenajes">Drenajes</option>
+                  <option value="pavimentacion">Pavimentación</option>
+                  <option value="terraceria">Terracería</option>
+                  <option value="maquinaria">Maquinaria</option>
+              </select>
+          </div>
+      </div>
+      <div>
+          <label for="comentarios" class="block text-sm font-semibold text-gray-700">Comentarios del servicio:</label>
+          <textarea id="comentarios" name="comentarios" rows="4" class="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+      </div>
+      <div class="flex items-center">
+          <input id="aceptaTerminos" name="aceptaTerminos" type="checkbox" required class="h-5 w-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+          <label for="aceptaTerminos" class="ml-3 text-sm font-medium text-gray-700">Acepto que Maquirsa del centro S.A DE C.V almacene y procese mis datos personales</label>
+      </div>
+      <div>
+          <button type="submit" class="w-full flex justify-center py-3 px-5 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Enviar
+          </button>
+      </div>
+  </form>
+</div>
+
+  
+  <script>
+    const form = document.getElementById('cotizaForm') as HTMLFormElement;
+  
+    
+  
+    function validateForm(data: Record<string, string>) {
+      let isValid = true;
+      const errors = [];
+  
+      if (data.nombre.length < 2) {
+        errors.push('El nombre debe tener al menos 2 caracteres.');
+        isValid = false;
+      }
+  
+      if (data.telefono.length < 10) {
+        errors.push('El teléfono debe tener al menos 10 dígitos.');
+        isValid = false;
+      }
+  
+      if (!/^\S+@\S+\.\S+$/.test(data.correo)) {
+        errors.push('Por favor, introduce un correo electrónico válido.');
+        isValid = false;
+      }
+  
+      if (!data.estado) {
+        errors.push('Por favor, introduce el estado.');
+        isValid = false;
+      }
+  
+      if (!data.ciudad) {
+        errors.push('Por favor, introduce la ciudad.');
+        isValid = false;
+      }
+  
+      if (!data.servicio) {
+        errors.push('Por favor, selecciona un servicio.');
+        isValid = false;
+      }
+  
+      if (!data.aceptaTerminos) {
+        errors.push('Debes aceptar los términos y condiciones.');
+        isValid = false;
+      }
+  
+      if (!isValid) {
+        alert('Por favor, corrige los siguientes errores:\n' + errors.join('\n'));
+      }
+  
+      return isValid;
+    }
+  </script>

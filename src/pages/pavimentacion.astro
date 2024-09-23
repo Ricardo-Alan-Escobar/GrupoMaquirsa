@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+// Importar imágenes
+import pv1 from "../components/Img/PAV1.jpg"
+import pv2 from "../components/Img/c2.png"
+import pv3 from "../components/Img/pav2.jpg"
+import pv4 from "../components/Img/c5.jpg"
+import pv5 from "../components/Img/c3.jpg"
+---
+
+<Layout></Layout>
+<div class="w-full h-20 bg-sky-900"><p>d</p>.</div>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold text-center mb-4">PAVIMENTACIÓN</h1>
+  
+  <p class="text-center mb-8">
+    Maquirsa del Centro ofrece servicios de pavimentación para una amplia variedad de proyectos,
+desde carreteras de corta extensión hasta grandes tramos de kilometraje.
+  </p>
+
+  <h2 class="text-2xl font-semibold mb-4 text-center">A continuación, se presentan los servicios que ofrece la empresa de pavimentación.</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div>
+      <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
+        
+        Construcción y Pavimentación:
+      </h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Pavimentación de calles</li>
+        <li>Trabajo de repavimentación de calles y carreteras </li>
+        <li>Gestión de pavimentación y superficies de edificios </li>
+        
+      </ul>
+      <div class="grid grid-cols-2 gap-4 mt-10">
+        <img src={pv1.src} alt="Construction site 1" width={300} height={200} class="rounded-lg" />
+        <img src={pv2.src} alt="Construction site 2" width={300} height={200} class="rounded-lg" />
+      </div>
+    </div>
+    
+    <div>
+      <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
+        
+        Mantenimiento de Infraestructura:
+      </h3>
+      <ul class="list-disc list-inside mb-4">
+        <li> Pavimentos de superficie</li>
+        <li> Asistencia en pavimentación de calles y carreteras</li>
+        
+      </ul>
+      <div class="grid grid-cols-2 gap-4 mt-12">
+        <img src={pv4.src} alt="Maintenance work 1" width={300} height={200} class="rounded-lg" />
+        <img src={pv5.src} alt="Maintenance work 2" width={300} height={200} class="rounded-lg" />
+      </div>
+    </div>
+  </div>
+</div>
+<Footer></Footer>

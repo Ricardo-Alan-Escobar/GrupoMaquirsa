@@ -1,0 +1,35 @@
+---
+// ScrollToTopButton.astro
+---
+
+<button
+  id="scrollToTopBtn"
+  class="fixed bottom-5 right-5 bg-sky-700 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity w-12 h-12 duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+  aria-label="Volver arriba"
+>
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  function toggleScrollButton() {
+    if (window.pageYOffset > 100) {
+      scrollToTopBtn.classList.remove("opacity-0");
+      scrollToTopBtn.classList.add("opacity-100");
+    } else {
+      scrollToTopBtn.classList.remove("opacity-100");
+      scrollToTopBtn.classList.add("opacity-0");
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  window.addEventListener("scroll", toggleScrollButton);
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+</script>

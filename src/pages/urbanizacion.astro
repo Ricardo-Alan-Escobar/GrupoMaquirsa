@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+// Importar imágenes
+import urb1 from "../components/Img/u3.jpg"
+import urb2 from "../components/Img/u2.jpg"
+import urb3 from "../components/Img/u3.webp"
+import urb4 from "../components/Img/pv-1.jpg"
+---
+
+<Layout></Layout>
+<div class="w-full h-20 bg-sky-900"><p>d</p>.</div>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold text-center mb-4">URBANIZACIÓN</h1>
+  
+  <p class="text-center mb-8">
+    En Grupo Maquinsa, nos especializamos en ofrecer soluciones integrales de urbanización que 
+    transforman terrenos en espacios urbanos funcionales y atractivos. 
+    Nuestro enfoque combina diseño innovador, planificación estratégica y ejecución precisa para 
+    crear entornos que mejoran la calidad de vida y fomentan el desarrollo comunitario.
+  </p>
+
+  <h2 class="text-2xl font-semibold mb-4 text-center">A continuación, encontrarás la relación de servicios que brindamos.</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div>
+      <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+        Construcción y Pavimentación:
+      </h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Construcción</li>
+        <li>Pavimentación</li>
+        <li>Repavimentación</li>
+        <li>Mantenimiento de calles y carreteras</li>
+        <li>Pavimentación de superficies</li>
+      </ul>
+      <div class="grid grid-cols-2 gap-4">
+        <img src={urb1.src} alt="Construction site 1" width={300} height={200} class="rounded-lg" />
+        <img src={urb2.src} alt="Construction site 2" width={300} height={200} class="rounded-lg" />
+      </div>
+    </div>
+    
+    <div>
+      <h3 class="text-xl font-semibold flex items-center gap-2 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        Mantenimiento de Infraestructura:
+      </h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Mantenimiento y reparación de calles</li>
+        <li>Carreteras</li>
+        <li>Limpieza de edificios</li>
+        <li>Nivelación de terrenos y mantenimiento de terrenos exteriores</li>
+      </ul>
+      <div class="grid grid-cols-2 gap-4">
+        <img src={urb3.src} alt="Maintenance work 1" width={300} height={200} class="rounded-lg" />
+        <img src={urb4.src} alt="Maintenance work 2" width={300} height={200} class="rounded-lg" />
+      </div>
+    </div>
+  </div>
+</div>
+<Footer></Footer>
