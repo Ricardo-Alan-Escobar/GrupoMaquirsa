@@ -58,7 +58,7 @@ import Cookies from '../components/Cookies.astro';
 
 	<div class="container mx-auto " id="conocenos">
 		<h1 class="text-4xl font-bold text-center mb-12  px-16 mt-20">Quiénes Somos</h1>
-		<div class="grid gap-12">
+		<div class="grid gap-12 w-full">
 			<section class="grid md:grid-cols-3 gap-8">
 				<div class="flex flex-col items-center text-center">
 					<img src={Users.src} alt="" class="h-12 w-12 text-primary mb-4" />
@@ -120,7 +120,7 @@ import Cookies from '../components/Cookies.astro';
 
 			<hr />
 
-			<section class="text-gray-600 body-font relative" id="contacto">
+			<section class="text-gray-600 body-font relative w-full" id="contacto">
 				<h1 class="text-4xl font-bold text-center mb-1 mt-24">Contáctanos</h1>
 				<div class="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
 					<div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -170,5 +170,6 @@ import Cookies from '../components/Cookies.astro';
 			<Cookies />
 			
 		</div>
+		<hr>
 		<Footer />
 	</html>
