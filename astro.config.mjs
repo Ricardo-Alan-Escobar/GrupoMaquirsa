@@ -1,13 +1,8 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://Ricardo-Alan-Escobar.github.io',
-  base:'/GrupoMaquirsa',
-  devOptions: {
-    devToolbar: false,
-  },
-  integrations: [tailwind()]
+  base: '/GrupoMaquirsa',
+  integrations: [tailwind()],
 });
