@@ -10,7 +10,7 @@ import '../styles/global.css';
 	<meta name="viewport" content="width=device-width" />
 	<meta name="generator" content={Astro.generator} />
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="/src/styles/global.css">
+	<link rel="stylesheet" href="">
 	<title>Maquirsa del Centro</title>
 	<!--FONT AWESOME-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,7 +23,7 @@ import '../styles/global.css';
 <nav class="bg-sky-900 w-full m-0 fixed h-20 text-white flex items-center justify-between z-50 px-4">
 	<!-- Logo -->
 	<div class="flex items-center">
-	  <a class="navbar-brand" href="./index.html">
+	  <a class="navbar-brand" href="/">
 		<img class="h-14" src={Logo.src} alt="Logo">
 	  </a>
 	</div>
@@ -35,13 +35,13 @@ import '../styles/global.css';
 			<a href="/" class=" px-2 py-4 hover:bg-sky-950 rounded">Inicio</a>
 		  </li>
 		<li>
-		  <a href="./index.html#conocenos" class=" px-1 py-4 hover:bg-sky-950 rounded hover:text-white">Quienes somos</a>
+		  <a href="/#conocenos" class=" px-1 py-4 hover:bg-sky-950 rounded hover:text-white">Quienes somos</a>
 		</li>
 		<li>
-		  <a href="./index.html#servicios" class="hover:white px-1 py-4 hover:bg-sky-950 rounded">Servicios</a>
+		  <a href="/#servicios" class="hover:white px-1 py-4 hover:bg-sky-950 rounded">Servicios</a>
 		</li>
 		<li>
-		  <a href="./maquinaria.html" class=" px-1 py-4 hover:bg-sky-950 rounded">Maquinaria</a>
+		  <a href="/maquinaria" class=" px-1 py-4 hover:bg-sky-950 rounded">Maquinaria</a>
 		</li>
 		<li>
 		  <a href="/" class="hover:text-green-400 p-2"><i class="fa-brands fa-whatsapp"></i></a>
@@ -76,16 +76,16 @@ import '../styles/global.css';
 	<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-sky-900 text-white">
 	  <ul class="flex flex-col items-center space-y-4 py-4">
 		<li>
-			<a href="./index.html" class="hover:text-slate-300">Inicio</a>
+			<a href="/" class="hover:text-slate-300">Inicio</a>
 		  </li>
 		<li>
-		  <a href="#conocenos" class="hover:text-slate-300">Quienes somos</a>
+		  <a href="/#conocenos" class="hover:text-slate-300">Quienes somos</a>
 		</li>
 		<li>
-		  <a href="#servicios" class="hover:text-slate-300">Servicios</a>
+		  <a href="/#servicios" class="hover:text-slate-300">Servicios</a>
 		</li>
 		<li>
-		  <a href="./maquinaria.html" class="hover:text-slate-300">Maquinaria</a>
+		  <a href="/maquinaria" class="hover:text-slate-300">Maquinaria</a>
 		</li>
 		<li>
 		  <a href="https://wa.link/9nmr67" class="hover:text-green-400 p-2"><i class="fa-brands fa-whatsapp"></i></a>
