@@ -7,17 +7,21 @@ import mision from '../components/Img/mision.png';
 import vision from '../components/Img/vision.png';
 import BtnDesplazamiento from '../components/btn-desplazamiento.astro';
 import Cookies from '../components/Cookies.astro';
+import Video from '../components/Img/video.gif'
 ---
 
 <head>
+	<link rel="icon" href="/icono.png" type="image/png" />
 	<meta charset="utf-8" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="generator" content={Astro.generator} />
 	<meta name="description" content="Somos una empresa destacada en el sector de la construcción, comprometida con la excelencia en cada
         proyecto. Ofrecemos soluciones integrales en ingeniería civil."/>
 	<title>Maquirsa del Centro</title>
-	<!--FONT AWESOME-->
+	
+
+
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<!--Fuentes-->
 	<link rel="stylesheet" href="/src/styles/global.css">
@@ -40,13 +44,10 @@ import Cookies from '../components/Cookies.astro';
 </head>
 
 <html class="scroll-smooth font-serif">
-	<Layout />
+	<Layout name="Maquirsa Del centro" />
 
-	<div class="relative flex items-center justify-center h-screen bg-black shadow-md overflow-hidden">
-		<video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-0">
-			<source src='/public/Videos/video.mp4' type="video/mp4">
-			Vídeo no soportado por tu navegador.
-		</video>
+	<div class="relative flex items-center justify-center h-screen bg-black shadow-md overflow-hidden"> 
+		<img src={Video.src} alt="GIF de fondo" class="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-0">
 		<div class="relative z-10 flex flex-col text-white text-4xl font-bold justify-center items-center px-4 lg:px-0">
 			<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center not-italic mb-8">Bienvenido a Maquirsa</h1>
 			<p class="text-center not-italic text-xl sm:text-2xl md:text-3xl leading-10">
@@ -58,6 +59,7 @@ import Cookies from '../components/Cookies.astro';
 			</div>
 		</div>
 	</div>
+	
 
 	<div class="container mx-auto mt-36" id="conocenos">
 		<h1 class="text-4xl font-bold text-center mb-12 mt-30 px-16">Quiénes Somos</h1>
