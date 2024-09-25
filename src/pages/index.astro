@@ -14,6 +14,8 @@ import Cookies from '../components/Cookies.astro';
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="generator" content={Astro.generator} />
+	<meta name="description" content="Somos una empresa destacada en el sector de la construcción, comprometida con la excelencia en cada
+        proyecto. Ofrecemos soluciones integrales en ingeniería civil."/>
 	<title>Maquirsa del Centro</title>
 	<!--FONT AWESOME-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -42,7 +44,7 @@ import Cookies from '../components/Cookies.astro';
 
 	<div class="relative flex items-center justify-center h-screen bg-black shadow-md overflow-hidden">
 		<video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-0">
-			<source src='/video.mp4' type="video/mp4">
+			<source src='/public/Videos/video.mp4' type="video/mp4">
 			Vídeo no soportado por tu navegador.
 		</video>
 		<div class="relative z-10 flex flex-col text-white text-4xl font-bold justify-center items-center px-4 lg:px-0">
@@ -57,9 +59,9 @@ import Cookies from '../components/Cookies.astro';
 		</div>
 	</div>
 
-	<div class="container mx-auto " id="conocenos">
-		<h1 class="text-4xl font-bold text-center mb-12  px-16 mt-20">Quiénes Somos</h1>
-		<div class="grid gap-12 w-full">
+	<div class="container mx-auto mt-36" id="conocenos">
+		<h1 class="text-4xl font-bold text-center mb-12 mt-30 px-16">Quiénes Somos</h1>
+		<div class="grid gap-12 w-full mt-20">
 			<section class="grid md:grid-cols-3 gap-8">
 				<div class="flex flex-col items-center text-center">
 					<img src={Users.src} alt="" class="h-12 w-12 text-primary mb-4" />
